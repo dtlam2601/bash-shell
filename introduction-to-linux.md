@@ -40,6 +40,15 @@
   - Required knowledge about Linux OSs
 
 ### Video•. Duration: 5 min - Overview of Linux Architecture
+```
+Includes:
+- UI
+- Application
+- Operating systems
+- Kernel
+- Hardware
+```
+
 * UI
 * Application
   ```Include: Sytem tools, Programming languages, Shells, User apps (such as browsers, text editors, games)```
@@ -51,6 +60,7 @@
 * Kernel
   ```
   perform vital operations
+  starts on boot
   bridge between apps and hardware
 
   Key jobs:
@@ -69,7 +79,26 @@
   USB devices
   ```
 
+* Linux filesystem
+  ```
+  /bin
+  /usr
+  /home
+  /boot
+  /media
+  (/sbin, /etc, /dev, /proc, /var, /tmp, /lib, /opt, /mnt, /srv)
+  ```
+
 ### Video•. Duration: 6 min - Linux Terminal Overview
+* Linux shell
+  - OS-level application that interprets commands
+  - Shells:
+    - Bash
+    - Zsh
+* Linux terminal
+  - an application you use to interact with the shell
+* Linux terminal and shell work together
+* Use a Linux terminal to navigate directories
 
 ### Video•. Duration: 6 min - Reading: Browsing directories with the Linux terminal
 
