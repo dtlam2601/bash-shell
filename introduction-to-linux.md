@@ -96,22 +96,92 @@ Includes:
     - Bash
     - Zsh
 * Linux terminal
-  - an application you use to interact with the shell
+  - An application you use to interact with the shell
+  - Enter comnands and receive output from them
+  - Communicating with Linux system
+  
 * Linux terminal and shell work together
+  ```
+    +--------+   +--------+   +---------------+   +--------+
+    |        |-->|        |-->|               |-->|        |
+    |  User  |   |Terminal|   |Shell OS Kernel|   |Hardware|
+    |        |<--|        |<--|               |<--|        |
+    |        |   |        |   |               |   |        |
+    +--------+   +--------+   +---------------+   +--------+
+
+    ```
+
 * Use a Linux terminal to navigate directories
+  - Special paths
+    - ~ Home directory
+    - / Root directory
+    - .. Parent directory
+    - . Current directory
 
-### Video•. Duration: 6 min - Reading: Browsing directories with the Linux terminal
+### Reading: Browsing directories with the Linux terminal
 
-### Ungraded Plugin•. Duration: 3 min - Reading: Linux Terminal Tips - Tab completion, command history
+### Ungraded Plugin - Reading: Linux Terminal Tips - Tab completion, command history
 
-### Ungraded Plugin•. Duration: 3 min - Hands-on Lab: Getting Started with the Linux Terminal
+### Ungraded Plugin - Hands-on Lab: Getting Started with the Linux Terminal
 
 ### Ungraded App Item•. Duration: 115 min - Creating and Editing Text Files
+* Popular text editors
+  * Command-line text editors
+    - GNU nano
+    - vi
+    - vim
+  * GUI-based text editors: gedit
+    - Integrated file browser
+    - Undo and redo
+    - Search and replace
+    - Extensibility
+  * Command-line or GUI
+    - emacs 
 
-### Video•. Duration: 6 min - Hands-on Lab: Installing and working with text editors
+### Hands-on Lab: Installing and working with text editors
 
-### Ungraded App Item•. Duration: 445 min - Installing Software and Updates
-
+### Video•. Duration: 6 min - Installing Software and Updates
+* Packages and package managers
+  * Packages: archive files
+  * Packages managers
+    - Manage the download and installation of packages
+    - Available for different Linux distros
+    - Can be GUI-based or command-line tools
+* Deb and RPM packages
+  * Packages for Linux OS
+  * Distinct file types for different Linux OS
+  * .deb files
+    - For Debian-based distributions such as Debian, Ubuntu, and Mint
+    - deb stands for Debian
+  * .rpm files
+    - For Red Hat-bases distributions such as CentOS/RHEL, Fedora, and open SUSE
+    - RPM stands for Red Hat Package Manager
+  * deb and rpm format are equivalent
+  * If a package is only available in one format, you can you alien to convert it
+    - RPM to deb
+    ```bash
+    alien <package-name>.rpm
+    ```
+    - deb to RPM
+    ```bash
+    alien -r <package-name>.deb
+    ```
+* Package managers
+  * Benefits
+    - Automatically resolve dependencies
+    - GUI-based package managers can automatically check for updates
+    - Automatic or manual installation
+  * Linux distro package managers include PackageKit and Update Manager
+* Updating deb-bases Linux
+  * GUI tool: Update Manager
+  * Command line: apt
+    ```bash
+    sudo apt upgrade
+    ```
+  * GUI tool: PackageKit
+  * Command line tool: Yum
+* Other software package managers
+  * Python package managers include pip and conda
 ### Video•. Duration: 6 min - Cheat Sheet: Introduction to Linux
 
 ### Ungraded Plugin•. Duration: 3 min - Summary & Highlights
