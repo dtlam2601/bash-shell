@@ -1,7 +1,8 @@
 ## Introduction to Shell Scripting
 
 
-### Video: Shell Scripting Basics . Duration: 4 min
+### Video: Shell Scripting Basics 
+. Duration: 4 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/9xMbm/shell-scripting-basics)
 * What is a script?: interpreted not compiled
   - List of commands that can be interpreted
   - Commands can be entered interactively
@@ -34,11 +35,38 @@
     ls -l hello_world.sh
     ```
 
-### Ungraded Plugin: Reading: A Brief Introduction to Shell Variables . Duration: 3 min
+### Ungraded Plugin: Reading: A Brief Introduction to Shell Variables 
+. Duration: 3 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/VxCx5/reading-a-brief-introduction-to-shell-variables)
 
-### Ungraded App Item: Ungraded App ItemHands-on Lab: Getting Started with Shell Scripting . Duration: 30 min
 
-### Video: Filters, Pipes, and Variables . Duration: 3 min
+### Ungraded App Item: Ungraded App ItemHands-on Lab: Getting Started with Shell Scripting
+. Duration: 30 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedLti/Fguee/hands-on-lab-getting-started-with-shell-scripting)
+
+### Video: Filters, Pipes, and Variables 
+. Duration: 3 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/Pj79L/filters-pipes-and-variables)
+* Pipes and filters: Filters are shell commands
+  - Take input from standard input
+  - Send output to standard output
+  - Transform input data into output data
+  - Examples: wc, cat, more, head, sort, grep
+  - Filters can be chained together
+  ```text
+  | - pipe command
+  For chaining filter commands
+  command1 | command2
+
+  Output of command 1 is input of command 2
+
+  ls | sort
+  ls | sort -r
+  ```
+* Shell variables
+  - Scope limited to shell
+    - set - list all shell variables
+    - unset to clear variables
+  - Extended scope
+    - export var_name
+    - env - list all environment variables
 
 ### Ungraded Plugin: Reading: Examples of Pipes . Duration: 5 min
 
