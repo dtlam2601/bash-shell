@@ -70,7 +70,19 @@
 
 ### Ungraded Plugin: Reading: Examples of Pipes 
 . Duration: 5 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/RaPeL/reading-examples-of-pipes)
+```text
+$ curl -s --location --request GET https://api.coinstats.app/public/v1/coins/bitcoin\?currency\=USD |\
+    grep -oE "\"price\":\s*[0-9]*?\.[0-9]*" |\
+    grep -oE "[0-9]*?\.[0-9]*"
 
+-o tells grep to only return the matching portion
+-E tells grep to be able to use extended regex symbols such as ?
+\"price\" matches the string "price"
+\s* matches any number (including 0) of whitespace (\s) characters
+: matches :
+[0-9]* matches any number of digits (from 0 to 9)
+?\. optionally matches a .
+```
 
 ### Video: Useful Features of the Bash Shell 
 . Duration: 5 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/pLqoL/useful-features-of-the-bash-shell)
@@ -123,15 +135,44 @@
 ### Ungraded Plugin: Reading: Examples of Bash Shell Features 
 . Duration: 5 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/f5hVj/reading-examples-of-bash-shell-features)
 
-### Ungraded Plugin: Reading: Introduction to Advanced Bash Scripting . Duration: 5 min
+### Ungraded Plugin: Reading: Introduction to Advanced Bash Scripting 
+. Duration: 5 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/QfnFG/reading-introduction-to-advanced-bash-scripting)
 
-### Ungraded App Item: Ungraded App ItemHands-on-Lab: Advanced Bash Scripting . Duration: 30 min
+```bash
+#!/usr/bin/env bash
+# initialize array, count, and sum
+my_array=(1 2 3)
+count=0
+sum=0
+for i in ${!my_array[@]}; do
+  # print the ith array element
+  echo ${my_array[$i]}
+  # increment the count by one
+  count=$(($count+1))
+  # add the current value of the array to the sum
+  sum=$(($sum+${my_array[$i]}))
+done
+echo $count
+echo $sum
+```
 
-### Video: Scheduling Jobs using Cron . Duration: 4 min
+### Ungraded App Item: Ungraded App ItemHands-on-Lab: Advanced Bash Scripting 
+. Duration: 30 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedLti/XSKJv/hands-on-lab-advanced-bash-scripting)
 
-### Ungraded App Item: Ungraded App ItemHands-on Lab: Scheduling Jobs using Crontab . Duration: 20 min
+### Video: Scheduling Jobs using Cron 
+. Duration: 4 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/Xso6o/scheduling-jobs-using-cron)
 
-### Ungraded Plugin: Cheat Sheet: Introduction to Shell Scripting . Duration: 15 min
+### Ungraded App Item: Ungraded App ItemHands-on Lab: Scheduling Jobs using Crontab 
+. Duration: 20 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedLti/uIWez/hands-on-lab-scheduling-jobs-using-crontab)
+
+### Ungraded Plugin: Cheat Sheet: Introduction to Shell Scripting 
+. Duration: 15 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/Fh2xm/cheat-sheet-introduction-to-shell-scripting)
+
+```text
+List cron jobs using crontab -l
+Add cron jobs using crontab -e
+Remove your current crontab using crontab -r
+```
 
 ### Reading: ReadingSummary & Highlights . Duration: 2 min
 
