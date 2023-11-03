@@ -68,11 +68,60 @@
     - export var_name
     - env - list all environment variables
 
-### Ungraded Plugin: Reading: Examples of Pipes . Duration: 5 min
+### Ungraded Plugin: Reading: Examples of Pipes 
+. Duration: 5 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/RaPeL/reading-examples-of-pipes)
 
-### Video: Useful Features of the Bash Shell . Duration: 5 min
 
-### Ungraded Plugin: Reading: Examples of Bash Shell Features . Duration: 5 min
+### Video: Useful Features of the Bash Shell 
+. Duration: 5 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/pLqoL/useful-features-of-the-bash-shell)
+* Metacharacters
+  ```text
+  # - precedes a command
+  ; - command separator
+  * - filename expansion wildcard
+  ? - single character wildcard in filename expansion
+  ```
+* Quoting
+  ```text
+  \ - escape unique character interpretation
+  " " - interpret literally, but evaluate metacharacters
+  ' ' - interpret literally
+  ```
+* I/O redirection
+  - Input/Output, or I/O redirection, refers to a set of features used for redirecting
+  ```text
+  >    - Redirect output to the file
+  >>   - Append output to the file
+  2>   - Redirect standard error to the file
+  2>>  - Append standard error to the file
+  <    - Redirect file contents to standard input
+  ```
+* Command substitution
+  - Replace the command with its output: $(command) or `command`
+  - Store output of pwd command in here:
+    ```bash
+    here=$(pwd)
+    echo $here
+    ```
+* Command line arguments
+  * Program arguments specified on the command line
+  * A way to pass arguments to a shell script
+  * Usage:
+    ```text
+    ./MyBashScript.sh arg1 arg2
+    ```
+* Batch versus concurrent modes
+  * Batch mode: commands run sequentially
+    ```text
+    command1; command2
+    ```
+  * Concurrent mode: commands run in parallel
+    ```text
+    command1 & command2
+    ```
+
+### Ungraded Plugin: Reading: Examples of Bash Shell Features 
+. Duration: 5 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/f5hVj/reading-examples-of-bash-shell-features)
 
 ### Ungraded Plugin: Reading: Introduction to Advanced Bash Scripting . Duration: 5 min
 
