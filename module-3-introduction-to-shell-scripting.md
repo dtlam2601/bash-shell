@@ -158,21 +158,80 @@ echo $sum
 
 ### Ungraded App Item: Ungraded App ItemHands-on-Lab: Advanced Bash Scripting 
 . Duration: 30 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedLti/XSKJv/hands-on-lab-advanced-bash-scripting)
+```text
+Tip: It is worth noting that had we been only interested in efficiency, one of the steps could have been avoided. Specifically, you could have redirected your calculations to a text file line-by-line rather than storing them in an array and then writing the array to file.
+```
+
+```bash
+# 1.1
+echo '#!/bin/bash' > script.sh
+chmod u+x script.sh
+
+
+# 3.1
+csv_file=https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-LX0117EN-SkillsNetwork/labs/M3/L2/arrays_table.csv
+wget $csv_file
+
+# 3.2
+cat arrays_table.csv
+
+# 3.3
+csv_file=arrays_table.csv
+column_0=($(cut -d "," -f 1 $csv_file))
+column_1=($(cut -d "," -f 2 $csv_file))
+column_2=($(cut -d "," -f 3 $csv_file))
+
+nlines=($(cat $csv_file | wc -l))
+column_3="./column_3.csv"
+echo "column_3" > $column_3
+for ((i=1; i<$nlines; i++)); do
+  echo $((column_2[$i] - column_1[$i])) >> $column_3
+done
+
+# 3.4
+paste -d "," $csv_file $column_3 > report.csv
+```
 
 ### Video: Scheduling Jobs using Cron 
 . Duration: 4 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/Xso6o/scheduling-jobs-using-cron)
+* Job scheduling
+  * Schedule jobs to run automatically at certain times
+* What is a Cron, Crond, and Crontab?
+  * Cron is a service that runs jobs
+  * Crond interprets 'crontab files'
+  * Crontab contains jobs and schedule data
+  * Crontab enables to edit a Crontab file
+* Scheduling Cron jobs with Crontab
+  ```text
+  # opens editor
+  crontab -e
+
+  # Job syntax:
+  # m h dom mon dow command
+  # min hour dayofmonth month dayofweek command
+
+  # Example job:
+  30 15 * * 0 date >> sundays.txt
+  # At 🕥 every Sunday, append date into sundays.txt file
+  ```
+* Viewing and removing Cron jobs
+  ```text
+  crontab -e # add/remove cron job with editor
+  ```
+  ![image](https://github.com/dtlam2601/bash-shell/assets/12412633/8d169cb3-d1cc-4adf-99b8-73e9e35260e1)
+
 
 ### Ungraded App Item: Ungraded App ItemHands-on Lab: Scheduling Jobs using Crontab 
 . Duration: 20 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedLti/uIWez/hands-on-lab-scheduling-jobs-using-crontab)
+```text
+* List cron jobs using crontab -l
+* Add cron jobs using crontab -e
+* Remove your current crontab using crontab -r
+```
 
 ### Ungraded Plugin: Cheat Sheet: Introduction to Shell Scripting 
 . Duration: 15 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/Fh2xm/cheat-sheet-introduction-to-shell-scripting)
 
-```text
-List cron jobs using crontab -l
-Add cron jobs using crontab -e
-Remove your current crontab using crontab -r
-```
 
 ### Reading: ReadingSummary & Highlights . Duration: 2 min
 
