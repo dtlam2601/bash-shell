@@ -159,9 +159,33 @@
 
 
 ### Ungraded Plugin: Reading: Getting Help for Linux Commands
-. Duration: 3 min - Link
+. Duration: 3 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/VmOux/reading-getting-help-for-linux-commands)
+* 1. Use the built-in man command
+man -k .
 
-###  ItemHands-on Lab: Informational Commands
+* 2. Install and use the tldr command
+Similar to man pages
+npm install -g tldr
+tldr command_name
+
+* 3. Search Stack Overflow
+Newest questions on Stack Overflow tagged "Linux": https://stackoverflow.com/questions/tagged/linux
+
+* 4. Search Stack Exchange
+Unix and Linux community on Stack Exchange: https://unix.stackexchange.com/
+
+* 5. Just google it!
+Learn how to enter the right queries and filter your results, such as by including "Wikipedia", "Stack Overflow", or "Linux" as part of your search.
+
+* 6. Use the cheat sheets from this course
+Throughout this course, you will encounter "cheat sheets" that condense the information you've learned into easy-to-reference guides. They are great for reviewing the material you've learned and can also help you out with your graded assignments.
+
+* 7. Refer to Wikipedia's list of Unix commands:
+Finally, Wikipedia maintains a list of commands that can be found on Unix operating systems, along with a short description. You can check the page to quickly reference a Unix command: https://en.wikipedia.org/wiki/List_of_Unix_commands
+```
+
+
+###  Hands-on Lab: Informational Commands
 . Duration: 330 min - Link
 
 ### Video: File and Directory Navigation Commands
@@ -170,13 +194,13 @@
 ### Video: File and Directory Management Commands
 . Duration: 7 min - Link
 
-###  ItemHands-on Lab: Navigating and Managing Files and Directories
+###  Hands-on Lab: Navigating and Managing Files and Directories
 . Duration: 330 min - Link
 
 ### Reading: Security - Managing File Permissions and Ownership
 . Duration: 4 min - Link
 
-###  ItemHands-on Lab: Access Control Commands
+###  Hands-on Lab: Access Control Commands
 . Duration: 110 min - Link
 
 ### Practice Quiz: Informational, Navigational, & Management Commands
@@ -190,7 +214,7 @@
 ### Video: Useful Commands for Wrangling Text Files
 . Duration: 5 min - Link
 
-###  ItemHands-on Lab: Wrangling Text Files at the Command Line
+###  Hands-on Lab: Wrangling Text Files at the Command Line
 . Duration: 440 min - Link
 
 ### Reading (Optional): A Brief Introduction to Networking
@@ -199,13 +223,13 @@
 ### Video: Networking Commands
 . Duration: 6 min - Link
 
-###  ItemHands-on Lab: Working with Networking Commands
+###  Hands-on Lab: Working with Networking Commands
 . Duration: 330 min - Link
 
 ### Video: File Archiving and Compression Commands
 . Duration: 6 min - Link
 
-###  ItemHands-on Lab: Archiving and Compressing Files
+###  Hands-on Lab: Archiving and Compressing Files
 . Duration: 115 min - Link
 
 ### Practice Quiz: Practice Quiz: Text Files, Networking & Archiving Commands
