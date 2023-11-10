@@ -186,22 +186,119 @@ Finally, Wikipedia maintains a list of commands that can be found on Unix operat
 
 
 ###  Hands-on Lab: Informational Commands
-. Duration: 330 min - Link
+. Duration: 330 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedLti/ZFgCW/hands-on-lab-informational-commands)
 
 ### Video: File and Directory Navigation Commands
-. Duration: 4 min - Link
+. Duration: 4 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/OFZjk/file-and-directory-navigation-commands)
+
+* Listing your directory contents
+  - ls (list) - list files and directories
+  ```text
+  ls
+  ls folder
+  ls -l 
+  ```
+
+* Finding your working directory
+  - pwd (print working directory) - get current working directory
+
+* Navigating your directory - Relative and absolute navigation
+  - cd (change directory) - change directory
+  ```text
+  cd ..
+  cd ~ # tilde symbol
+  cd /
+  ```
+
+* Finding files
+  - find - find files in directory tree
+  ```mermaid
+  graph TD;
+      Documents-->folder1;
+      Documents-->folder2;
+      folder1-->a.txt;
+      folder1-->b.txt;
+      folder2-->A.txt;
+      folder2-->Y.txt;
+      folder2-->Z.txt;
+  ```
+  ```text
+  pwd
+  find . -name "a.txt"
+  ./folder1/a.txt
+
+  # find case-insensitive
+  find . -iname "a.txt"
+  ./folder1/a.txt
+  ./folder2/A.txt
+  ```
 
 ### Video: File and Directory Management Commands
-. Duration: 7 min - Link
+. Duration: 7 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/pwUDl/file-and-directory-management-commands)
+* Creating directories
+  - mkdir (make directory) - Make directory
+
+* Removing files and directories
+  - rm (remove) - Remove file or directory
+  ```text
+  rm file1
+  rm -r folder1
+
+  mkdir empty_folder
+  rmdir empty_folder
+  ls
+  ```
+
+* Creating files
+  - touch - Create empty file, update file date
+  ```text
+  touch a.txt b.txt c.txt d.txt
+
+  date -r a.txt
+  touch a.txt
+  date -r a.txt
+  ```
+
+* Copying files and directories
+  - cp (copy) - Copy file or directory to destination
+  ```text
+  To copy files:
+  cp /source/file /dest/filename
+  cp /source/file /dest/
+
+  To copy directories:
+  cp -r /source/dir/ /dest/dir/
+  ```
+
+* Moving files and directories
+  - mv (move) - Move a file or directory
+  ```text
+  To move files:
+  mv /source/file /dest/file
+
+  To move directories:
+  mv /source/dir/ /dest/dir/
+  ```
+
+* Managing file permissions
+  - chmod (change mode) - Change file permissions
+  ```text
+  chmod +x my_script.sh
+  ./my_script.sh
+  ```
 
 ###  Hands-on Lab: Navigating and Managing Files and Directories
-. Duration: 330 min - Link
+. Duration: 330 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedLti/RKRTp/hands-on-lab-navigating-and-managing-files-and-directories)
 
 ### Reading: Security - Managing File Permissions and Ownership
-. Duration: 4 min - Link
+. Duration: 4 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/AnNec/reading-security-managing-file-permissions-and-ownership)
 
 ###  Hands-on Lab: Access Control Commands
-. Duration: 110 min - Link
+. Duration: 110 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedLti/wXPUJ/hands-on-lab-access-control-commands)
+```text
+Note: You might be wondering what that s permission is in the execute slot for your group. The s stands for "special permission". It means that any new files created within the directory will have their group ownership set to be the same as the directory owner. We won't go into this level of detail in this course, but you can learn more about advanced Linux permissions here:[ Linux permissions: SUID, SGID, and sticky bit](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMLX0117ENSkillsNetwork860-2023-01-01#:~:text=Commonly%20noted%20as%20SUID%2C%20the,use%20an%20uppercase%20S%20here.).
+```
+
 
 ### Practice Quiz: Informational, Navigational, & Management Commands
 . Duration: 6 min - Link
