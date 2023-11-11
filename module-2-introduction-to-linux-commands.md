@@ -524,8 +524,8 @@ Compression preserves storage space, speeds data transfer, and reduces system lo
 ```
 
 ### Cheat Sheet: Introduction to Linux Commands
-. Duration: 10 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/W5gX4/cheat-sheet-introduction-to-linux-commands)https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/W5gX4/cheat-sheet-introduction-to-linux-commands
+. Duration: 10 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedWidget/W5gX4/cheat-sheet-introduction-to-linux-commands)
 
 ### Upgrade to unlock
 Quiz: Graded Quiz: Linux Commands
-. Duration: 30 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/exam/Dl739/graded-quiz-linux-commands)https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/exam/Dl739/graded-quiz-linux-commands
+. Duration: 30 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/exam/Dl739/graded-quiz-linux-commands)
