@@ -298,21 +298,86 @@ Finally, Wikipedia maintains a list of commands that can be found on Unix operat
 
 | Note: You might be wondering what that s permission is in the execute slot for your group. The s stands for "special permission". It means that any new files created within the directory will have their group ownership set to be the same as the directory owner. We won't go into this level of detail in this course, but you can learn more about advanced Linux permissions here:[ Linux permissions: SUID, SGID, and sticky bit](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMLX0117ENSkillsNetwork860-2023-01-01#:~:text=Commonly%20noted%20as%20SUID%2C%20the,use%20an%20uppercase%20S%20here.).
 
-
-
 ### Practice Quiz: Informational, Navigational, & Management Commands
-. Duration: 6 min - Link
+. Duration: 6 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/quiz/VTAGj/practice-quiz-informational-navigational-management-commands)
 
 
 ## Working with Text Files, Networking & Archiving Commands
 ### Video: Viewing File Content
-. Duration: 3 min - Link
+. Duration: 3 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/NRDyr/viewing-file-content)
+* Viewing your file all at once
+  - cat (catenate) - Print entire file contents
+
+* Viewing your file page-by-page
+  - more - Print file contents page-by-page
+
+* Viewing the first N lines
+  - head - Print first 10 lines of file
+  - head -n N - Print first N lines of file
+
+* Viewing the last N lines
+  - tail - Print last 10 lines of file
+  - tail -n N - Print last N lines of file
+
+* Counting lines, words, and characters
+  - wc (word count) - Count characters, words, lines
+
+```text
+cat file.txt
+more file.txt
+less file.txt
+
+head file.txt
+head -n 5 file.txt
+head -5 file.txt
+
+tail file.txt
+tail -n 5 file.txt
+
+wc file.txt
+# line, word, character
+wc -l file.txt
+wc -w file.txt
+wc -c file.txt
+```
 
 ### Video: Useful Commands for Wrangling Text Files
-. Duration: 5 min - Link
+. Duration: 5 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/lecture/frBog/useful-commands-for-wrangling-text-files)
+* Sorting your view line-by-line
+  - sort - Sort lines in a file 
+
+* Excluding repeated lines from views
+  - uniq (unique) - Filter out repeated lines
+
+* Extracting lines matching a pattern
+  - grep (global regular expression print) - Return lines in file matching pattern
+
+* Extracting slices from lines
+  - cut -c - Extracts a section from each line
+  - cut -d - Extracts a field from each line
+
+* Merging lines from multiple files
+  - paste - Merge lines from different files
+
+```text
+sort file.txt
+sort -r file.txt
+
+cat file.txt
+
+# for case-sensitive and case-insensitive
+grep ch file.txt
+grep -i ch file.txt
+
+cut -c 2-9 people.txt
+cut -d ' ' -f2 people.txt
+
+paste first.txt last.txt yob.txt
+paste -d "," first.txt last.txt yob.txt
+```
 
 ###  Hands-on Lab: Wrangling Text Files at the Command Line
-. Duration: 440 min - Link
+. Duration: 40 min - [Link](https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting/ungradedLti/Zhpj8/hands-on-lab-wrangling-text-files-at-the-command-line)
 
 ### Reading (Optional): A Brief Introduction to Networking
 . Duration: 3 min - Link
